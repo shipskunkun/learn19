@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <script src="../vue/vue.js"></script>
+
+    <div id="app">
+        {{ lala }}
+        <!-- <i-button size="large"></i-button> -->
+    </div>
+
+    <template>
+      <div>
+        <Alert v-if="show">这是一条提示信息</Alert>
+        <button @click="show = true">显示</button>
+      </div>
+    </template>
+<script>
+  import Alert from '../component/alert.vue';
+
+  export default {
+    components: { Alert },
+    data () {
+      return {
+        show: false
+      }
+    }
+  }
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,13 @@
+server {
+    # 监听80端口号
+    listen 80;
+
+    # 监听访问的域名
+    server_name a.com;
+
+    # 根据访问路径配置
+    location / {
+        # 把请求转发到 https://www.baidu.com
+        proxy_pass https://www.baidu.com;
+    }
+}
